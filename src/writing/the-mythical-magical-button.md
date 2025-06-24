@@ -66,7 +66,7 @@ Can we make a button that separates the CSS for `data-variant` and `data-style`?
 Well, the answer is yes! We can write CSS where changing *one custom property* allows for all this. 
 
 ::: info
-To be clear. We need less buttons. You should start out with “variants + states”, where the starting variants are: primary, secondary, danger, outline, and ghost. 
+To be clear. We need less buttons. You should start out with “variants + states”, where the starting variants are: primary, secondary, danger, outline, and ghost. This allows us to make the last method I discussed more lean and understandable (e.g. `[data-variant=“”]:hover`). This is my preferred way. 
 :::
 
 ## Anatomy of a button
