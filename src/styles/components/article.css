@@ -74,7 +74,7 @@ article h2:hover a {
 */
 
 article :where(img, pre, .info, .archive) {
-  border-radius: var(--token-radius-3);
+  border-radius: 0;
   margin-left: 50%;
   transform: translateX(-50%);
   width: 100vw;
@@ -83,18 +83,10 @@ article :where(img, pre, .info, .archive) {
 
 /** discard rounded corners on full width */
 @container post (inline-size < 47rem) {
-  article :where(img, pre, blockquote) {
-    border-radius: 0 !important; /* overwrite specificity */
-  }
-
   article pre {
-    border-left: 0px;
-    border-right: 0px;
+    border-bottom: 2px solid var(--surface-2);
+    border-top: 2px solid var(--border-color);
     box-shadow: none;
-  }
-
-  article :where(.info, .archive) {
-    width: 100%;
   }
 }
 
@@ -170,10 +162,6 @@ ol:not([class]) {
 }
 
 @media only screen and (max-width: 670px) {
-  article {
-    font-size: 1.1em;
-  }
-
   article h1 {
     font-size: var(--token-size-3);
   }

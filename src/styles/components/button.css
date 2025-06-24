@@ -13,27 +13,23 @@
   top: 0;
   left: 0;
   text-decoration: none;
+  text-transform: uppercase;
+  font-size: var(--token-size-00);
+  font-weight: bold;
   color: var(--button-text);
-  background: var(--button-bg);
+  background: var(--primary);
   padding: 0.5em var(--token-size-000);
-  border: 2px solid var(--button-shadow);
-  border-radius: 4rem;
   transition: 0.3s;
-  box-shadow: 4px 4px 0 0 var(--button-shadow);
+  box-shadow: var(--token-elevation);
 }
 
-.btn:is(:hover, :active, :focus) {
-  box-shadow: 0 0 0 0 var(--button-shadow);
-  top: 4px;
-  left: 4px;
+.btn:is(:hover, :focus) {
+  box-shadow: 0 0 0 0;
+
   color: var(--button-text);
   opacity: 1;
 }
 
-@media (prefers-color-scheme: dark) {
-  .btn {
-    --button-bg: var(--surface-0);
-    --button-shadow: var(--primary);
-    --button-text: var(--text-0);
-  }
+.btn:active {
+  transform: scale(97%);
 }

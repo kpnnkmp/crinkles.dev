@@ -1,7 +1,7 @@
 @layer global, layout, components, utilities, animations, blog;
 
 /** Import feo-css */
-@import "../../node_modules/feo-css/feo-core.min.css";
+@import "../../node_modules/feo-css/feo.min.css";
 
 /** Global styles to extend or overwrite feo.css */
 @import "tokens.css" layer(global);

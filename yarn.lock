@@ -788,10 +788,10 @@ fdir@^6.4.4:
   resolved "https://registry.yarnpkg.com/fdir/-/fdir-6.4.5.tgz#328e280f3a23699362f95f2e82acf978a0c0cb49"
   integrity sha512-4BG7puHpVsIYxZUbiUE3RqGloLaSSwzYie5jvasC4LWuBWzZawynvYouhjbQKw2JuIGYdm0DzIxl8iVidKlUEw==
 
-feo-css@^6.0.0-beta.2:
-  version "6.0.0-beta.2"
-  resolved "https://registry.yarnpkg.com/feo-css/-/feo-css-6.0.0-beta.2.tgz#d21cd5b6ab1e33c6b425676d4b25dcd05fc7ee9c"
-  integrity sha512-rf4YMGk0rrz7L7BbFdL5yNchFSeWPAnl1R6K/6l0RpE+i/atunSvIuqT+eTt/UA4agQTJBB80r+VRtP/AuU0fw==
+feo-css@^6.0.0-beta.5:
+  version "6.0.0-beta.5"
+  resolved "https://registry.yarnpkg.com/feo-css/-/feo-css-6.0.0-beta.5.tgz#e48de51f01bbc3123d62a023ce14716a3376318c"
+  integrity sha512-KoosBdZNvlnxyYczeMXEtiFoZkAeNisaZfn3oBEB1QmPqCBMmrCzf9HKK6YJzXdBoJ8fsDlygVRUWv1CH9hrXA==
 
 filesize@^10.1.6:
   version "10.1.6"

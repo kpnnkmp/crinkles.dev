@@ -18,6 +18,18 @@
   --token-brand-4: #ff8052;
 
   /**
+   * OVERWRITE OF FEO TOKENS
+   */
+  --token-size-000: clamp(0.72rem, 0.7013rem + 0.0936vw, 0.7738rem);
+  --token-size-00: clamp(0.9rem, 0.8543rem + 0.2287vw, 1.0315rem);
+  --token-size-0: clamp(1.125rem, 1.038rem + 0.4348vw, 1.375rem);
+  --token-size-1: clamp(1.4063rem, 1.2579rem + 0.742vw, 1.8329rem);
+  --token-size-2: clamp(1.7578rem, 1.5194rem + 1.192vw, 2.4432rem);
+  --token-size-3: clamp(2.1973rem, 1.8287rem + 1.8427vw, 3.2568rem);
+  --token-size-4: clamp(2.7466rem, 2.1919rem + 2.7735vw, 4.3413rem);
+  --token-size-5: clamp(3.4332rem, 2.6145rem + 4.0935vw, 5.787rem);
+
+  /**
    * FONT FAMILY
    */
   --sans-serif:
@@ -25,18 +37,22 @@
     sans-serif;
 
   /**
-   * RADIUS & ELEVATION
+   * BORDERS
    */
-  --token-radius-0: 0.25rem;
-  --token-radius-1: 0.5rem;
-  --token-radius-2: 0.75rem;
-  --token-radius-3: 1rem;
-  --token-radius-4: 1.5rem;
+  --border-size-0: 2px;
+  --border-size-1: calc(0.175 * var(--token-size-0));
+  --border-color: color-mix(in oklab, var(--primary) 60%, var(--surface-0));
 
+  /**
+   * SHADOW & ELEVATION
+   */
   --token-shadow:
-    0 1px 1px hsl(0deg 0% 0% / 0.075), 0 3px 3px hsl(0deg 0% 0% / 0.075),
-    0 6px 6px hsl(0deg 0% 0% / 0.075);
-  --token-elevation: 4px 4px 0px 0px var(--text-0);
+    0 3px 3px hsl(from #0c312d h s l / 0.1),
+    0 6px 6px hsl(from #0c312d h s l / 0.1),
+    0 12px 12px hsl(from #0c312d h s l / 0.1);
+  --token-elevation:
+    -0.225em -0.225em 0px 0px var(--border-color),
+    0.225em 0.225em 0px 0px var(--surface-2);
 
   /**
    * LIGHT THEME

@@ -6,14 +6,12 @@
 
 .info,
 .archive {
-  box-shadow: var(--token-elevation);
-  border-radius: var(--token-radius-1);
-  padding: var(--token-size-0) var(--token-size-1);
+  /* border-bottom: 2px solid var(--surface-2);
+  border-top: 2px solid var(--border-color); */
+  padding: var(--token-size-0);
   background-color: var(--surface-1);
   font-size: 0.9em;
   position: relative;
-  border-left: 1px solid var(--primary);
-  border-top: 1px solid var(--primary);
 }
 
 .info a,
@@ -32,10 +30,10 @@
 .archive::before {
   position: absolute;
   display: block;
-  top: -0.85em;
+  top: -0.5em;
   font-size: var(--token-size-00);
-  border-radius: var(--token-radius-0);
   background-color: var(--primary);
+  box-shadow: var(--token-elevation);
   color: var(--surface-0);
   padding: 0px 6px;
 }

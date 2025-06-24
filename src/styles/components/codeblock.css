@@ -3,8 +3,14 @@ pre {
   box-shadow: var(--token-elevation);
   background-color: var(--surface-1);
   color: var(--text-0);
-  border: 1px solid var(--text-0);
   font-weight: 400;
+}
+
+pre::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: var(--token-shadow);
 }
 
 pre code {
@@ -18,15 +24,15 @@ pre code {
 /** SYNTAX */
 .token.punctuation,
 .token.comment,
-.token.operator,
-.token.tag {
+.token.operator {
   color: var(--text-2);
   font-weight: 300;
 }
 
 /** SYNTAX */
 
-.token.keyword {
+.token.keyword,
+.token.tag {
   color: var(--text-2);
 }
 
