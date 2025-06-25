@@ -1,6 +1,6 @@
 pre {
   border: none;
-  box-shadow: var(--token-elevation);
+  box-shadow: var(--elevation-0);
   background-color: var(--surface-1);
   color: var(--text-0);
   font-weight: 400;
@@ -10,7 +10,7 @@ pre::before {
   content: "";
   position: absolute;
   inset: 0;
-  box-shadow: var(--token-shadow);
+  box-shadow: var(--shadow-0);
 }
 
 pre code {

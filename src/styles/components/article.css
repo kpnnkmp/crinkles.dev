@@ -98,7 +98,7 @@ article :where(img, pre, .info, .archive) {
  * IMAGES
  */
 article img {
-  box-shadow: var(--token-shadow);
+  box-shadow: var(--shadow-0);
 }
 
 /**

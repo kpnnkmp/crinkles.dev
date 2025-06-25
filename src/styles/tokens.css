@@ -41,17 +41,25 @@
    */
   --border-size-0: 2px;
   --border-size-1: calc(0.175 * var(--token-size-0));
-  --border-color: color-mix(in oklab, var(--primary) 60%, var(--surface-0));
 
   /**
    * SHADOW & ELEVATION
    */
-  --token-shadow:
+  --shadow-0:
     0 3px 3px hsl(from #0c312d h s l / 0.1),
     0 6px 6px hsl(from #0c312d h s l / 0.1),
     0 12px 12px hsl(from #0c312d h s l / 0.1);
-  --token-elevation:
-    -0.225em -0.225em 0px 0px var(--border-color),
+  --elevation-0:
+    -0.225em -0.225em 0px 0px
+      color-mix(
+        in oklab,
+        var(--elevation-color, var(--primary)) 60%,
+        var(--surface-0)
+      ),
+    0.225em 0.225em 0px 0px var(--surface-2);
+  --elevation-1:
+    -0.225em -0.225em 0px 0px
+      color-mix(in oklab, var(--accent) 60%, var(--surface-0)),
     0.225em 0.225em 0px 0px var(--surface-2);
 
   /**
@@ -67,6 +75,7 @@
   --surface-2: var(--token-neutral-3);
 
   --primary: var(--token-brand-1);
+  --accent: hsl(from var(--token-brand-4) h s calc(l * 0.5));
 
   --code-primary: var(--token-brand-1);
   --code-secondary: hsl(from var(--token-brand-3) h s calc(l * 0.8));
@@ -87,6 +96,7 @@
     --surface-2: var(--token-neutral-2);
 
     --primary: var(--token-brand-2);
+    --accent: var(--token-brand-4);
 
     --code-primary: var(--token-brand-2);
     --code-secondary: var(--token-brand-3);
