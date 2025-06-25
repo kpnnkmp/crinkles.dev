@@ -14,7 +14,7 @@ Imagine. Here you are, satisfied with the setup of your button in your design sy
 
 ## Buttons, buttons, buttons
 
-This is what happened to me in the past days. I got into a *heated discussion* with a colleague about buttons (you have too many buttons Jeroen!). But the underlying question was about implementation. To be precise, how to cut the amount of CSS required. This requires us to first understand the different buttons we want to create. For this article, we limit it to color-related CSS.
+This is what happened to me in the past days. I got into a *heated discussion* with a colleague about buttons (you have too many buttons Jeroen!). But the underlying question was about implementation. To be precise: how to cut the amount of CSS required but keep a dynamic button that allows for simple stacking of colors and styles. This requires us to first understand the different buttons we want to create. For this article, we limit it to color-related CSS.
 
 - Variant of the button (e.g., primary, secondary, danger, neutral);
 - Styles of the button (e.g., fill, outline, or ghost);
