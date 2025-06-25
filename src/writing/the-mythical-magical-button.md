@@ -45,17 +45,17 @@ One option is to avoid defining a custom property for each state of every color-
 
 ```css
 button {
-	--_bg: ; /* background */
-	--_bc: ; /* border-color */
-	--_c: ;  /* color */
+	--_background: ; /* background */
+	--_border: ; /* border-color */
+	--_color: ;  /* color */
 }
 
 [data-variant="primary"][data-style="fill"]:hover {
-	--_bg: var(--primary-light);
+	--_background: var(--primary-light);
 }
 
 [data-variant="primary"][data-style="fill"]:focus {
-	--_bc: var(--primary-dark);
+	--_border: var(--primary-dark);
 }
 ```
 
@@ -88,53 +88,53 @@ We start with the introduction of the API of the class. Developers are meant to 
 
 ```css
 button {  
-  --btn-variant: ;
-  --_bg: transparent; /* background-color */
-  --_c: transparent;  /* color */
-  --_bc: transparent; /* border-color */
-  --_m: 20%;          /* color-mix variable */
-  --_w: 3px;          /* border-width */
+  --variant: ;
+  --_background: transparent;
+  --_color: transparent;
+  --_border: transparent;
+  --_mix: 20%;   /* color-mix variable */
+  --_width: 3px; /* border-width */
 }
 ```
 
 ## Button variants
 
-As you can see in the previous code snippet, there is also one custom property defined, the `--btn-variant`.  The variant color is the primary color for the button style. It is the background color for a filled button, for instance.  
+As you can see in the previous code snippet, there is also one custom property defined, the `--variant`.  The variant color is the primary color for the button style. It is the background color for a filled button, for instance.  
 
 ```css
 button[data-variant="primary"] {
-	--btn-variant: rebeccapurple;
+	--variant: rebeccapurple;
 }
 ```
 
 And that is it. You only need to change one custom property when adding a new variant, and then everything will work. This is what I was talking about. But we have a lot more work to do to make that happen. 
 
 ::: info
-Almost no color works well as a `--btn-variant` for light and dark mode. The filled style usually works fine. But the outlined and ghost buttons cause issues in these setups. Make sure to always check your contrasts!
+Almost no color works well as a `--variant` for light and dark mode. The filled style usually works fine. But the outlined and ghost buttons cause issues in these setups. Make sure to always check your contrasts!
 :::
 
 ## Button styles
 
-The next step is configuring the different `data-style` options. This is where we set some of our internal custom properties with the `--btn-variant`. Combine the internal custom properties with the two properties defined for our `data-variant`. Let’s start with the “outline” and “ghost” styles. As you can see below, they are pretty similar, but the ghost lacks the border. 
+The next step is configuring the different `data-style` options. This is where we set some of our internal custom properties with the `--variant`. Combine the internal custom properties with the two properties defined for our `data-variant`. Let’s start with the “outline” and “ghost” styles. As you can see below, they are pretty similar, but the ghost lacks the border. 
 
 ```css
 button[data-style="outline"] {
-  --_bc: var(--btn-variant);
-  --_c: var(--btn-variant);
+  --_border: var(--variant);
+  --_color: var(--variant);
 }
 
 button[data-style="ghost"] {
-  --_c: var(--btn-variant);
+  --_color: var(--variant);
 }
 ```
 
-The “fill” style is a bit more interesting. As you would expect, we set `--_bg: var(--btn-variant)`. We define the `--_bc` for the filled style as well, as we need it later down the line. 
+The “fill” style is a bit more interesting. As you would expect, we set `--_background: var(--variant)`. We define the `--_border` for the filled style as well, as we need it later down the line. 
 
 ```css
 button[data-style="fill"] {
-	--_bg: var(--btn-variant);
-	--_bc: var(--btn-variant);
-	--_c: color(from var(--btn-variant) xyz
+	--_background: var(--variant);
+	--_border: var(--variant);
+	--_color: color(from var(--variant) xyz
     round(up, min(1, max(0, 0.18 - y)))
     round(up, min(1, max(0, 0.18 - y)))
     round(up, min(1, max(0, 0.18 - y)))
@@ -142,17 +142,17 @@ button[data-style="fill"] {
 }
 ```
 
-But what is that magical CSS around `--_c`? That is a snippet of CSS that mathematically determines, based on `--btn-variant` [if white or black provides the best contrast](https://blog.damato.design/posts/css-only-contrast/). It is not 100% waterproof. But in most cases, it will work. 
+But what is that magical CSS around `--_color`? That is a snippet of CSS that mathematically determines, based on `--variant` [if white or black provides the best contrast](https://blog.damato.design/posts/css-only-contrast/). It is not 100% waterproof. But in most cases, it will work. 
 
 ```css
 button[data-variant="primary"] {
-  --btn-variant: rebeccapurple;
-  /* --_c will be white */
+  --variant: rebeccapurple;
+  /* --_color will be white */
 }
 
 button[data-variant="secondary"] {
-  --btn-variant: limegreen;
-  /* --_c will be black */
+  --variant: limegreen;
+  /* --_color will be black */
 }
 ```
 
@@ -160,12 +160,12 @@ But because it is CSS, we can overwrite it if we want.
 
 ```css
 button[data-variant="neutral"] {
-  --btn-variant: #333;
-  /* --_c will be white */
+  --variant: #333;
+  /* --_color will be white */
 }
 
 button[data-variant="neutral"][data-style="fill"] {
-  --_c: red;
+  --_color: red;
 }
 ```
 
@@ -196,19 +196,19 @@ Let’s crank up the difficulty a bit and use some fancy modern CSS. To make a u
 button:not(:disabled):hover {
   background-color: color-mix(
 	  in oklab, 
-	  var(--_bg), 
-	  var(--_c) var(--_m));
+	  var(--_background), 
+	  var(--_color) var(--_mix));
   border-color: color-mix(
 	  in oklab, 
-	  var(--_bc), 
-	  var(--_bg) var(--_m));
+	  var(--_border), 
+	  var(--_background) var(--_mix));
 }
 ```
 
-What this function does is mix two colors (duh). The `--_m` used is to set how much color is mixed. Remember that we set `--_m: 20%`? This means that we use 20% of `--_c` and 80% `--_bg` when mixing for the `background-color`. For the `border-color` we mix between `--_bc` and `--_bg`. This will give us the following effects:
+What this function does is mix two colors (duh). The `--_mix` used is to set how much color is mixed. Remember that we set `--_mix: 20%`? This means that we use 20% of `--_color` and 80% `--_background` when mixing for the `background-color`. For the `border-color` we mix between `--_border` and `--_background`. This will give us the following effects:
 
-- **Fill**: the background will become a bit lighter or darker. `--_c` is set by automatically based on contrast. This gives us a darker hover for light variants and a lighter hover for dark variants. The border will remain in its colors, as `--_bc` and `--_bg` are the same in this style. This gives a nice slight difference between the border and background on hover.
-- **Outline**: because `--_bg` is transparent in this style, a nice mix with `--btn-variant` for the background will be created. On a light/dark page, the background of the button becomes a very light/dark version of `--btn-variant`. The border of the button will slightly lighten/darken as well.  
+- **Fill**: the background will become a bit lighter or darker. `--_color` is set by automatically based on contrast. This gives us a darker hover for light variants and a lighter hover for dark variants. The border will remain in its colors, as `--_border` and `--_background` are the same in this style. This gives a nice slight difference between the border and background on hover.
+- **Outline**: because `--_background` is transparent in this style, a nice mix with `--variant` for the background will be created. On a light/dark page, the background of the button becomes a very light/dark version of `--variant`. The border of the button will slightly lighten/darken as well.  
 - **Ghost**: because the border is transparent, we only create an effect on the background, which is the same as the outline style. 
 
 The last state that remains is the `:focus` state. I often see a style defined that is closely related to the `:hover` or `:active`, but with slight differences. But why make it difficult? The focus state is not a state you see often on the screen, and when it is there, it should just be recognizable. The original `:focus` sets the `outline` for a reason. So I will settle for the [version by Andy Bell (again!)](https://piccalil.li/blog/how-i-build-a-button-component/). But with minor adjustments. 
@@ -216,13 +216,13 @@ The last state that remains is the `:focus` state. I often see a style defined t
 ```css
 /* add a focus ring on the outside */
 button:not(:disabled):focus {
-  outline-width: var(--_w);
+  outline-width: var(--_width);
   outline-style: solid;
   outline-color: color-mix(
 	  in oklab, 
-	  var(--btn-variant), 
-	  black var(--_m));
-  outline-offset: var(--_w); 
+	  var(--variant), 
+	  black var(--_mix));
+  outline-offset: var(--_width); 
 }
 ```
 
@@ -233,8 +233,8 @@ We make sure that the `outline` is balanced nicely with the `border`. We give it
   button:not(:disabled):focus {
     outline-color: color-mix(
 	    in oklab, 
-	    var(--btn-variant), 
-	    white var(--_m));
+	    var(--variant), 
+	    white var(--_mix));
   }
 }
 ```
