@@ -88,6 +88,10 @@ article :where(img, pre, .info, .archive) {
     border-top: 2px solid var(--border-color);
     box-shadow: none;
   }
+
+  article pre::before {
+    content: unset;
+  }
 }
 
 /**
