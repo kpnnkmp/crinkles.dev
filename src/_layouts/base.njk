@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="{{ metadata.language }}">
     <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{{ title or metadata.title }} • Crinkles</title>
         <link rel="stylesheet" href="{{ '/styles/index.css' | url }}">
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-        <meta name="generator" content="Eleventy" />
-        <meta name="color-scheme" content="light dark" />
+        <meta name="generator" content="Eleventy">
+        <meta name="color-scheme" content="light dark">
         <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f9fafb">
         <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1B1E22">
         <meta name="view-transition" content="same-origin">
+        <!-- seo -->
+        <meta name="robots" content="index,follow">
+        <meta name="googlebot" content="index,follow">
         <!-- assets -->
         <link rel="icon" href="/favicon.ico" sizes="any">
         <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="manifest" href="/site.webmanifest">
         <!-- links -->
         <link rel="canonical" href="{{ metadata.url }}">
