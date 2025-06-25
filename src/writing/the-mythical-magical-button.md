@@ -82,7 +82,7 @@ Let’s start with the basics. We want to add semantic value to the code. Someth
 </button>
 ```
 
-No on to the CSS for the button. To keep it lean, I am focusing on the (custom) properties related to the scope of this post. But the codepen at the bottom of this article gives you all the styles. 
+Now on to the CSS for the button. To keep it lean, I am focusing on the (custom) properties related to the scope of this post. But the codepen at the bottom of this article gives you all the styles. 
 
 We start with the introduction of the API of the class. Developers are meant to change this list of custom properties. You will see that an underscore prepends all properties. This is just a code-style thing to say that these are “internal” properties. We do not mean to change these properties, or we will change them through other CSS classes later. 
 
@@ -252,4 +252,4 @@ That is it! Don’t believe me? Check [this codepen](https://codepen.io/kpnnkmp/
 
 ## Wrapping up
 
-We can make a simple stylesheet for buttons by mixing methods from various sources and using modern CSS. If you want to add a new variant, such as “info”, you can do so by defining one variable. Ok, two variables, as you would need to choose a different color for dark mode. And remember: CSS is awesome. Even with this type of CSS, you can define and style those specific cases that do not fit the general implementation. 
+We can make a simple stylesheet for buttons by mixing methods from various sources and using modern CSS. If you want to add a new variant, such as “info”, you can do so by defining one variable. Ok, two variables, as you would need to choose a different color for dark mode. And remember: CSS is awesome. Even with all this CSS magic, you can define and style those specific cases that do not fit the general implementation. 
