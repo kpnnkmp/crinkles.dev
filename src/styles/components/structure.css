@@ -79,7 +79,7 @@ main:not(:has(.pagination)) {
  * FOOTER
  */
 footer {
-  --footer-bg: var(--token-brand-3);
+  --footer-bg: var(--token-brand-2);
   --footer-text: var(--token-neutral-0);
 
   padding: var(--token-size-2) var(--token-size-2) var(--token-size-5);
