@@ -42,6 +42,9 @@
   --border-size-0: 2px;
   --border-size-1: calc(0.175 * var(--token-size-0));
 
+  --border-primary: color-mix(in oklab, var(--primary) 60%, var(--surface-0));
+  --border-accent: color-mix(in oklab, var(--accent) 60%, var(--surface-0));
+
   /**
    * SHADOW & ELEVATION
    */
@@ -49,17 +52,11 @@
     0 3px 3px hsl(from #0c312d h s l / 0.1),
     0 6px 6px hsl(from #0c312d h s l / 0.1),
     0 12px 12px hsl(from #0c312d h s l / 0.1);
-  --elevation-0:
-    -0.225em -0.225em 0px 0px
-      color-mix(
-        in oklab,
-        var(--elevation-color, var(--primary)) 60%,
-        var(--surface-0)
-      ),
+  --elevation-primary:
+    -0.225em -0.225em 0px 0px var(--border-primary),
     0.225em 0.225em 0px 0px var(--surface-2);
-  --elevation-1:
-    -0.225em -0.225em 0px 0px
-      color-mix(in oklab, var(--accent) 60%, var(--surface-0)),
+  --elevation-accent:
+    -0.225em -0.225em 0px 0px var(--border-accent),
     0.225em 0.225em 0px 0px var(--surface-2);
 
   /**

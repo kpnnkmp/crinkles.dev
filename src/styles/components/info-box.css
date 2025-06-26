@@ -32,13 +32,13 @@
 
 .info::before {
   content: "<aside />";
-  box-shadow: var(--elevation-0);
+  box-shadow: var(--elevation-primary);
   background-color: var(--primary);
 }
 
 .archive::before {
   content: "<archive />";
   background-color: var(--accent);
-  box-shadow: var(--elevation-1);
+  box-shadow: var(--elevation-accent);
   color: var(--surface-0);
 }

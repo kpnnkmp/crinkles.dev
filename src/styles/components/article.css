@@ -85,7 +85,7 @@ article :where(img, pre, .info, .archive) {
 @container post (inline-size < 47rem) {
   article pre {
     border-bottom: 2px solid var(--surface-2);
-    border-top: 2px solid var(--border-color);
+    border-top: 2px solid var(--border-primary);
     box-shadow: none;
   }
 

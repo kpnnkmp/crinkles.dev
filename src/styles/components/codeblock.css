@@ -1,6 +1,6 @@
 pre {
   border: none;
-  box-shadow: var(--elevation-0);
+  box-shadow: var(--elevation-primary);
   background-color: var(--surface-1);
   color: var(--text-0);
   font-weight: 400;

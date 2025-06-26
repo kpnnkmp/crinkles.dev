@@ -14,7 +14,7 @@
   height: 75px;
   border-radius: 4px;
   background-color: var(--primary);
-  box-shadow: var(--elevation-0);
+  box-shadow: var(--elevation-primary);
   transition: transform 400ms;
 }
 
