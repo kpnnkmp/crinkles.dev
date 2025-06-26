@@ -72,7 +72,7 @@
   --surface-2: var(--token-neutral-3);
 
   --primary: var(--token-brand-1);
-  --accent: hsl(from var(--token-brand-4) h s calc(l * 0.5));
+  --accent: hsl(from var(--token-brand-3) h s calc(l * 0.8));
 
   --code-primary: var(--token-brand-1);
   --code-secondary: hsl(from var(--token-brand-3) h s calc(l * 0.8));
@@ -93,7 +93,7 @@
     --surface-2: var(--token-neutral-2);
 
     --primary: var(--token-brand-2);
-    --accent: var(--token-brand-4);
+    --accent: var(--token-brand-3);
 
     --code-primary: var(--token-brand-2);
     --code-secondary: var(--token-brand-3);
