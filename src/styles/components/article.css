@@ -72,26 +72,12 @@ article h2:hover a {
 /**
 * GENERAL STYLING OF ELEMENTS
 */
-
 article :where(img, pre, .info, .archive) {
   border-radius: 0;
   margin-left: 50%;
   transform: translateX(-50%);
   width: 100vw;
   max-width: var(--layout-threshold);
-}
-
-/** discard rounded corners on full width */
-@container post (inline-size < 47rem) {
-  article pre {
-    border-bottom: 2px solid var(--surface-2);
-    border-top: 2px solid var(--border-primary);
-    box-shadow: none;
-  }
-
-  article pre::before {
-    content: unset;
-  }
 }
 
 /**
@@ -165,7 +151,85 @@ ol:not([class]) {
   list-style: decimal outside;
 }
 
-@media only screen and (max-width: 670px) {
+/**
+ * CODE BLOCKS
+ */
+pre {
+  border: none;
+  box-shadow: var(--elevation-primary);
+  background-color: var(--surface-1);
+  color: var(--text-0);
+  font-weight: 400;
+}
+
+pre::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  box-shadow: var(--shadow-0);
+}
+
+pre code {
+  padding: var(--token-size-0);
+}
+
+:not(pre) > code {
+  color: var(--primary);
+}
+
+/** SYNTAX */
+.token.punctuation,
+.token.comment,
+.token.operator {
+  color: var(--text-2);
+  font-weight: 300;
+}
+
+/** SYNTAX */
+
+.token.keyword,
+.token.tag {
+  color: var(--text-2);
+}
+
+/** To overwrite the above colors */
+.token.attr-value {
+  color: var(--text-0);
+}
+
+.token.attr-name,
+.token.selector {
+  color: var(--code-primary);
+}
+
+.token.property,
+.token.function {
+  color: var(--code-secondary);
+}
+
+.token.string,
+.token.number {
+  color: var(--code-tertiary);
+}
+
+.token.function,
+.token.comment,
+.token.keyword {
+  font-style: italic;
+}
+
+/** discard rounded corners on full width */
+@container post (inline-size < 47rem) {
+  article pre {
+    border-bottom: 2px solid var(--surface-2);
+    border-top: 2px solid var(--border-primary);
+    box-shadow: none;
+  }
+}
+
+/** smaller headers on smaller screens */
+@container post (inline-size < 40rem) {
   article h1 {
     font-size: var(--token-size-3);
   }

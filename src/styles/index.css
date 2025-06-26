@@ -10,16 +10,12 @@
 /** components */
 @import "components/article.css" layer(components);
 @import "components/structure.css" layer(components);
-@import "components/codeblock.css" layer(components);
 @import "components/pagination.css" layer(components);
 @import "components/tag.css" layer(components);
 @import "components/button.css" layer(components);
 @import "components/icon.css" layer(components);
-
 @import "components/info-box.css" layer(components);
 @import "components/card.css" layer(components);
-@import "components/testing.css" layer(components);
-
 @import "components/title-section.css" layer(layout);
 @import "components/page-section.css" layer(layout);
 @import "components/info-section.css" layer(layout);
