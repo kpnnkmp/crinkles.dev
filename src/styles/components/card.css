@@ -5,11 +5,3 @@
   box-shadow: var(--elevation-primary);
   max-width: var(--card-width, var(--token-bp-3));
 }
-
-.card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  box-shadow: var(--shadow-0);
-}

@@ -49,16 +49,16 @@
    * SHADOW & ELEVATION
    */
   --shadow-0:
-    0 3px 3px hsl(from #0c312d h s l / 0.1),
-    0 6px 6px hsl(from #0c312d h s l / 0.1),
-    0 12px 12px hsl(from #0c312d h s l / 0.1);
+    0 3px 3px hsl(from var(--token-brand-1) h s l / 0.1),
+    0 6px 6px hsl(from var(--token-brand-1) h s l / 0.1),
+    0 12px 12px hsl(from var(--token-brand-1) h s l / 0.1);
   --elevation-primary:
-    -0.225em -0.225em 0px 0px var(--border-primary),
-    0.225em 0.225em 0px 0px var(--surface-2);
-  --elevation-accent:
-    -0.225em -0.225em 0px 0px var(--border-accent),
-    0.225em 0.225em 0px 0px var(--surface-2);
+    -0.25em -0.25em 0px 0px var(--surface-2),
+    0.25em 0.25em 0px 0px var(--border-primary);
 
+  --elevation-accent:
+    -0.25em -0.25em 0px 0px var(--border-accent),
+    0.25em 0.25em 0px 0px var(--surface-2);
   /**
    * LIGHT THEME
    */

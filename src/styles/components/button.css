@@ -19,8 +19,8 @@
   color: var(--button-text);
   background: var(--primary);
   padding: 0.5em var(--token-size-000);
-  transition: 0.3s;
-  box-shadow: var(--elevation-primary);
+  transition: 0.5s;
+  box-shadow: var(--elevation-primary), var(--shadow-0);
 }
 
 .btn:is(:hover, :focus) {

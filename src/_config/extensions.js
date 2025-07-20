@@ -1,7 +1,7 @@
 import browserslist from "browserslist";
 import { bundleAsync, browserslistToTargets } from "lightningcss";
 
-const targets = browserslistToTargets(browserslist("> 0.25% and not dead"));
+const targets = browserslistToTargets(browserslist("> 0.5% and not dead"));
 
 export function css(config) {
   config.addTemplateFormats("css");
