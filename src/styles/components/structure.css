@@ -41,7 +41,7 @@ main {
   flex-direction: column;
   position: relative;
   background: var(--surface-0);
-  border-bottom: 2px solid var(--text-0);
+  border-bottom: 2px solid var(--primary);
   width: 100%;
   z-index: 1;
 }
@@ -79,8 +79,8 @@ main:not(:has(.pagination)) {
  * FOOTER
  */
 footer {
-  --footer-bg: var(--token-brand-3);
-  --footer-text: var(--token-neutral-0);
+  --footer-bg: var(--surface-1);
+  --footer-text: var(--text-0);
 
   padding: var(--token-size-2) var(--token-size-2) var(--token-size-5);
   background: var(--footer-bg);
