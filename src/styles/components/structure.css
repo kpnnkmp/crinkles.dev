@@ -79,12 +79,8 @@ main:not(:has(.pagination)) {
  * FOOTER
  */
 footer {
-  --footer-bg: var(--surface-1);
-  --footer-text: var(--text-0);
-
   padding: var(--token-size-2) var(--token-size-2) var(--token-size-5);
-  background: var(--footer-bg);
-  color: var(--footer-text);
+  background-color: var(--surface-1);
   font-size: var(--token-size-00);
   inset: 0;
   top: unset;
@@ -111,12 +107,12 @@ footer .quote {
 }
 
 footer svg path {
-  fill: var(--footer-text);
+  fill: var(--text-0);
 }
 
 footer .icon {
   font-size: var(--token-size-0);
-  color: var(--footer-text);
+  color: var(--text-0);
 }
 
 footer a {
