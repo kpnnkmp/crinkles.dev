@@ -41,7 +41,7 @@ main {
   flex-direction: column;
   position: relative;
   background: var(--surface-0);
-  border-bottom: 2px solid var(--primary);
+  border-bottom: 2px solid var(--text-0);
   width: 100%;
   z-index: 1;
 }

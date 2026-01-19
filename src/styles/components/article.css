@@ -156,18 +156,10 @@ ol:not([class]) {
  */
 pre {
   border: none;
-  box-shadow: var(--elevation-primary);
-  background-color: var(--surface-1);
-  color: var(--text-0);
+  box-shadow: var(--elevation-accent);
+  background-color: var(--token-neutral-1);
+  color: var(--token-neutral-5);
   font-weight: 400;
-}
-
-pre::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  box-shadow: var(--shadow-0);
 }
 
 pre code {
@@ -182,20 +174,19 @@ pre code {
 .token.punctuation,
 .token.comment,
 .token.operator {
-  color: var(--text-2);
+  color: var(--token-neutral-3);
   font-weight: 300;
 }
 
 /** SYNTAX */
-
 .token.keyword,
 .token.tag {
-  color: var(--text-2);
+  color: var(--token-neutral-3);
 }
 
 /** To overwrite the above colors */
 .token.attr-value {
-  color: var(--text-0);
+  color: var(--token-neutral-5);
 }
 
 .token.attr-name,
@@ -222,8 +213,8 @@ pre code {
 /** discard rounded corners on full width */
 @container post (inline-size < 47rem) {
   article pre {
-    border-bottom: 2px solid var(--surface-2);
-    border-top: 2px solid var(--border-primary);
+    border-top: 2px solid var(--surface-2);
+    border-bottom: 2px solid var(--accent);
     box-shadow: none;
   }
 }

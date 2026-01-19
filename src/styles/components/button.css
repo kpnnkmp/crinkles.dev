@@ -17,7 +17,7 @@
   font-size: var(--token-size-00);
   font-weight: bold;
   color: var(--button-text);
-  background: var(--primary);
+  background: var(--accent);
   padding: 0.5em var(--token-size-000);
   transition: 0.5s;
   box-shadow: var(--elevation-primary), var(--shadow-0);

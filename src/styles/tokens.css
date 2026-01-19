@@ -12,10 +12,10 @@
   /**
    * BRAND COLORS
    */
-  --token-brand-1: #1c756a;
-  --token-brand-2: #c1ef7a;
-  --token-brand-3: #939be6;
-  --token-brand-4: #ff8052;
+  --token-brand-1: #f6734a;
+  --token-brand-2: #ffeea4;
+  --token-brand-3: #4cd9c1;
+  --token-brand-4: #1c756a;
 
   /**
    * OVERWRITE OF FEO TOKENS
@@ -52,13 +52,14 @@
     0 3px 3px hsl(from var(--token-brand-1) h s l / 0.1),
     0 6px 6px hsl(from var(--token-brand-1) h s l / 0.1),
     0 12px 12px hsl(from var(--token-brand-1) h s l / 0.1);
+
   --elevation-primary:
     -0.25em -0.25em 0px 0px var(--surface-2),
-    0.25em 0.25em 0px 0px var(--border-primary);
+    0.25em 0.25em 0px 0px var(--primary);
 
   --elevation-accent:
-    -0.25em -0.25em 0px 0px var(--border-accent),
-    0.25em 0.25em 0px 0px var(--surface-2);
+    -0.25em -0.25em 0px 0px var(--surface-2),
+    0.25em 0.25em 0px 0px var(--accent);
   /**
    * LIGHT THEME
    */
@@ -71,12 +72,12 @@
   --surface-1: var(--token-neutral-4);
   --surface-2: var(--token-neutral-3);
 
-  --primary: var(--token-brand-1);
-  --accent: hsl(from var(--token-brand-3) h s calc(l * 0.8));
+  --primary: var(--token-brand-4);
+  --accent: hsl(from var(--token-brand-4) h calc(s * 0.8) calc(l * 1.6));
 
-  --code-primary: var(--token-brand-1);
-  --code-secondary: hsl(from var(--token-brand-3) h s calc(l * 0.8));
-  --code-tertiary: hsl(from var(--token-brand-4) h s calc(l * 0.5));
+  --code-primary: var(--token-brand-2);
+  --code-secondary: var(--token-brand-1);
+  --code-tertiary: var(--token-brand-3);
 }
 
 /**
@@ -92,11 +93,7 @@
     --surface-1: var(--token-neutral-1);
     --surface-2: var(--token-neutral-2);
 
-    --primary: var(--token-brand-2);
-    --accent: var(--token-brand-3);
-
-    --code-primary: var(--token-brand-2);
-    --code-secondary: var(--token-brand-3);
-    --code-tertiary: var(--token-brand-4);
+    --primary: var(--token-brand-1);
+    --accent: var(--token-brand-2);
   }
 }

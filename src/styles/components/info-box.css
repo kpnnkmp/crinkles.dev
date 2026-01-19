@@ -33,12 +33,12 @@
 .info::before {
   content: "<aside />";
   box-shadow: var(--elevation-primary);
-  background-color: var(--primary);
+  background-color: var(--accent);
 }
 
 .archive::before {
   content: "<archive />";
-  background-color: var(--accent);
+  background-color: var(--primary);
   box-shadow: var(--elevation-accent);
   color: var(--surface-0);
 }
