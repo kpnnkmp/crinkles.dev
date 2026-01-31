@@ -125,5 +125,5 @@ Would I recommend this move to everybody? No. It is highly dependent on your way
 I enjoyed the entire migration and tend to stick with it. CSS has become powerful enough to not require different tools or languages anymore. The resulting code is maintainable and risk-free of breaking tools.
 
 ::: info
-If you are curious about the actual changes, compare [Feo CSS](https://github.com/kpnnkmp/feo-css) and the [/styles](https://github.com/kpnnkmp/crinkles.dev/tree/main/src/styles) directory of this website. The previous version of this website used Feo CSS before the migration.
+If you are curious about the actual changes, compare [Feo CSS](https://github.com/kpnnkmp/feo-css) and the [/styles](https://github.com/kpnnkmp/interrupted.dev/tree/main/src/styles) directory of this website. The previous version of this website used Feo CSS before the migration.
 :::

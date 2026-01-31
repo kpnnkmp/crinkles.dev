@@ -1,21 +1,21 @@
 {
   "title": "Kevin Pennekamp",
-  "url": "https://crinkles.dev/",
-  "site": "Crinkles",
+  "url": "https://interrupted.dev/",
+  "site": "Interrupted",
   "language": "en",
   "description": "UI development studio of Kevin Pennekamp, a Dutch web craftsman, front-end engineer and engineering manager. I love CSS, creating development tooling and writing about it!",
   "keywords": "CSS, front-end, web design, consulting, architecture",
   "feed": {
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
-    "id": "https://crinkles.dev/"
+    "id": "https://Interrupted.dev/"
   },
   "author": {
     "name": "Kevin Pennekamp",
-    "email": "kevin@crinkles.dev",
-    "url": "https://crinkles.dev/about"
+    "email": "kevin@Interrupted.dev",
+    "url": "https://Interrupted.dev/about"
   },
   "social": {
-    "img": "https://crinkles.dev/sm-image.png"
+    "img": "https://Interrupted.dev/sm-image.png"
   }
 }

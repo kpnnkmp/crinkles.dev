@@ -96,7 +96,7 @@ footer .signature {
 }
 
 footer .signature svg {
-  height: 3em;
+  height: 2.5em;
 }
 
 footer .quote {
@@ -105,7 +105,7 @@ footer .quote {
   text-align: center;
 }
 
-footer svg path {
+footer .socials svg path {
   fill: var(--text-0);
 }
 
