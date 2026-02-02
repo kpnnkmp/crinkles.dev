@@ -120,7 +120,7 @@ article blockquote cite {
 
 /** INLINE CODE */
 article :not(pre) > code {
-  color: var(--primary);
+  color: var(--accent);
 }
 
 /**

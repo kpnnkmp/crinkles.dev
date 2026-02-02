@@ -1,4 +1,12 @@
 @media (prefers-reduced-motion: no-preference) {
+  .--duration-0 {
+    --duration: 1.5s;
+  }
+
+  .--duration-1 {
+    --duration: 2s;
+  }
+
   .glitch {
     animation:
       glitch 2s linear infinite,
@@ -14,7 +22,11 @@
 
   .text-glitch {
     display: inline-block;
-    animation: text-glitch 2.5s linear infinite;
+    animation: text-glitch;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: var(--duration, 2.5s);
+    animation-delay: var(--delay, 0s);
   }
 
   @keyframes glitch {
