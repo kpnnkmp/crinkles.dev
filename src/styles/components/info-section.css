@@ -15,3 +15,7 @@
 .info-section > dd :is(a, span) {
   font-weight: bold;
 }
+
+.info-section > dd + dd {
+  margin-top: var(--token-size-0);
+}
