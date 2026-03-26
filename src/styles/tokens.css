@@ -2,20 +2,25 @@
   /**
    * NEUTRAL
    */
-  --token-neutral-0: hsl(215, 18%, 8%);
-  --token-neutral-1: hsl(215, 18%, 22%);
-  --token-neutral-2: hsl(215, 18%, 36%);
-  --token-neutral-3: hsl(215, 18%, 78%);
-  --token-neutral-4: hsl(215, 24%, 92%);
-  --token-neutral-5: hsl(215, 24%, 98%);
+  --token-neutral-0: hsl(215, 24%, 98%);
+  --token-neutral-1: hsl(215, 24%, 92%);
+  --token-neutral-2: hsl(215, 18%, 78%);
+  --token-neutral-3: hsl(215, 18%, 36%);
+  --token-neutral-4: hsl(215, 18%, 22%);
+  --token-neutral-5: hsl(215, 18%, 8%);
 
   /**
-   * BRAND COLORS
+   * COLORS
    */
-  --token-brand-1: #f6734a;
-  --token-brand-2: #ffeea4;
-  --token-brand-3: #4cd9c1;
-  --token-brand-4: #1c756a;
+  --token-orange-0: #f2c89d;
+  --token-orange-1: #f6734a;
+  --token-orange-2: #da4415;
+  --token-green-0: #25ac89;
+  --token-yellow-0: #ffd27f;
+
+  --code-primary: var(--token-orange-1);
+  --code-secondary: var(--token-orange-0);
+  --code-tertiary: var(--token-green-0);
 
   /**
    * OVERWRITE OF FEO TOKENS
@@ -39,45 +44,43 @@
   /**
    * BORDERS
    */
-  --border-size-0: 2px;
-  --border-size-1: calc(0.175 * var(--token-size-0));
-
-  --border-primary: color-mix(in oklab, var(--primary) 60%, var(--surface-0));
-  --border-accent: color-mix(in oklab, var(--accent) 60%, var(--surface-0));
+  --radius: 0.5em;
 
   /**
    * SHADOW & ELEVATION
    */
-  --shadow-0:
-    0 3px 3px hsl(from var(--token-brand-1) h s l / 0.1),
-    0 6px 6px hsl(from var(--token-brand-1) h s l / 0.1),
-    0 12px 12px hsl(from var(--token-brand-1) h s l / 0.1);
+  --box-shadow:
+    0 0.2em 0.3em hsl(from var(--box-shadow-color) h s l / 0.1),
+    0 0.5em 0.75em hsl(from var(--box-shadow-color) h s l / 0.1);
 
-  --elevation-primary:
-    -0.25em -0.25em 0px 0px var(--surface-2),
-    0.25em 0.25em 0px 0px var(--primary);
-
-  --elevation-accent:
-    -0.25em -0.25em 0px 0px var(--surface-2),
-    0.25em 0.25em 0px 0px var(--accent);
   /**
    * LIGHT THEME
    */
   color-scheme: light;
-  accent-color: var(--primary);
-  --text-0: var(--token-neutral-0);
-  --text-1: var(--token-neutral-1);
-  --text-2: var(--token-neutral-2);
-  --surface-0: var(--token-neutral-5);
-  --surface-1: var(--token-neutral-4);
-  --surface-2: var(--token-neutral-3);
+  accent-color: var(--logo-color);
 
-  --primary: var(--token-brand-1);
-  --accent: var(--token-brand-4);
+  --text-0: var(--token-neutral-5);
+  --text-1: var(--token-neutral-4);
+  --text-2: var(--token-neutral-3);
+  --surface-0: var(--token-neutral-0);
+  --surface-1: var(--token-neutral-1);
+  --surface-2: var(--token-neutral-2);
 
-  --code-primary: var(--token-brand-2);
-  --code-secondary: var(--token-brand-1);
-  --code-tertiary: var(--token-brand-3);
+  --canvas: var(--token-orange-1);
+  --logo-color: var(--token-orange-1);
+  --link-color: var(--token-orange-2);
+  --list-color: var(--token-orange-2);
+  --quote-color: var(--token-orange-2);
+  --header-color: var(--token-orange-1);
+  --inline-code-color: var(--token-orange-2);
+  --button-text: var(--token-orange-2);
+  --button-background: transparent;
+  --button-border: var(--token-orange-2);
+  --box-shadow-color: var(--token-orange-0);
+  --card-border: var(--token-orange-0);
+  --card-shadow: 0.25em 0.25em 0px 0px var(--card-border);
+  --info-background: var(--token-orange-0);
+  --info-text: var(--token-neutral-5);
 }
 
 /**
@@ -86,14 +89,27 @@
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
-    --text-0: var(--token-neutral-5);
-    --text-1: var(--token-neutral-4);
-    --text-2: var(--token-neutral-3);
-    --surface-0: var(--token-neutral-0);
-    --surface-1: var(--token-neutral-1);
-    --surface-2: var(--token-neutral-2);
+    --text-0: var(--token-neutral-0);
+    --text-1: var(--token-neutral-1);
+    --text-2: var(--token-neutral-2);
+    --surface-0: var(--token-neutral-5);
+    --surface-1: var(--token-neutral-4);
+    --surface-2: var(--token-neutral-3);
 
-    --primary: var(--token-brand-1);
-    --accent: var(--token-brand-2);
+    --canvas: var(--token-orange-0);
+    --logo-color: var(--token-orange-1);
+    --link-color: var(--token-orange-1);
+    --list-color: var(--token-orange-0);
+    --quote-color: var(--token-orange-0);
+    --header-color: var(--token-orange-0);
+    --inline-code-color: var(--token-orange-0);
+    --button-text: var(--token-orange-0);
+    --button-background: transparent;
+    --button-border: var(--token-orange-0);
+    --box-shadow-color: var(--token-orange-0);
+    --card-border: var(--token-orange-0);
+    --card-shadow: 0.25em 0.25em 0px 0px var(--card-border);
+    --info-background: var(--token-orange-0);
+    --info-text: var(--token-neutral-5);
   }
 }

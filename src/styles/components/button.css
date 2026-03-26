@@ -6,28 +6,25 @@
  */
 
 .btn {
-  --button-bg: var(--primary);
-  --button-shadow: var(--text-0);
-  --button-text: var(--surface-0);
   position: relative;
   top: 0;
   left: 0;
   text-decoration: none;
   text-transform: uppercase;
+  text-align: center;
   font-size: var(--token-size-00);
   font-weight: bold;
   color: var(--button-text);
-  background: var(--accent);
+  background: var(--button-background);
+  border: 2px solid var(--button-border);
   padding: 0.5em var(--token-size-000);
-  transition: 0.5s;
-  box-shadow: var(--elevation-primary), var(--shadow-0);
+  border-radius: var(--radius);
+  transition: all 0.2s;
 }
 
 .btn:is(:hover, :focus) {
-  box-shadow: 0 0 0 0;
-
-  color: var(--button-text);
-  opacity: 1;
+  box-shadow: var(--box-shadow);
+  transform: scale(105%);
 }
 
 .btn:active {

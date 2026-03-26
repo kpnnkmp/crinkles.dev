@@ -24,21 +24,18 @@
 .archive::before {
   position: absolute;
   display: block;
-  top: -0.5em;
+  top: -0.7em;
   font-size: var(--token-size-00);
-  color: var(--surface-0);
+  color: var(--info-text);
   padding: 0px 6px;
+  background-color: var(--info-background);
+  border-radius: var(--radius);
 }
 
 .info::before {
   content: "<aside />";
-  box-shadow: var(--elevation-primary);
-  background-color: var(--accent);
 }
 
 .archive::before {
   content: "<archive />";
-  background-color: var(--primary);
-  box-shadow: var(--elevation-accent);
-  color: var(--surface-0);
 }

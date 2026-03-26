@@ -6,7 +6,7 @@
  */
 
 .tag:not(.token) {
-  --tag-color: var(--primary);
+  --tag-color: var(--link-color);
   --tag-hash-color: var(--tag-color);
   color: inherit;
 
@@ -25,7 +25,7 @@
 }
 
 a.tag:not(.token) {
-  text-decoration-color: var(--primary);
+  text-decoration-color: var(--link-color);
 }
 
 a.tag:not(.token):hover {

@@ -1,6 +1,5 @@
 ---
 title: Stuff I write about
-description: Blog
 picture: svg/sticker-book.svg
 layout: paginated
 width: 5
@@ -16,8 +15,8 @@ pagination:
   <aside>
     <div class="card | flex --column --center --gap-1">
       <h2>Categories</h2>
-      {% set tags = collections.posts | getAllTags %}
-      {% include "components/tag-list.njk" %}
+      {% set tags = collections.posts | getAllTags %} {% include
+      "components/tag-list.njk" %}
     </div>
   </aside>
 </div>

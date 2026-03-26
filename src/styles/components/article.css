@@ -53,7 +53,7 @@ article :where(h2 a, h3 a) {
 }
 
 article h2:has(a):hover {
-  color: var(--primary);
+  color: var(--header-color);
 }
 
 article h2 a::after {
@@ -73,7 +73,7 @@ article h2:hover a {
 * GENERAL STYLING OF ELEMENTS
 */
 article :where(img, pre, .info, .archive, .cp_embed_wrapper) {
-  border-radius: 0;
+  border-radius: var(--radius);
   margin-left: 50%;
   transform: translateX(-50%);
   width: 100vw;
@@ -84,7 +84,7 @@ article :where(img, pre, .info, .archive, .cp_embed_wrapper) {
  * IMAGES
  */
 article img {
-  box-shadow: var(--shadow-0);
+  box-shadow: var(--box-shadow);
 }
 
 /**
@@ -99,7 +99,7 @@ article blockquote {
 }
 
 article blockquote::before {
-  background: var(--primary);
+  background: var(--quote-color);
   content: "";
   height: calc(100% + 1px);
   left: 0;
@@ -115,12 +115,7 @@ article blockquote cite {
   font-style: italic;
   text-align: right;
   margin-top: var(--token-size-0);
-  color: var(--primary);
-}
-
-/** INLINE CODE */
-article :not(pre) > code {
-  color: var(--accent);
+  color: var(--quote-color);
 }
 
 /**
@@ -137,7 +132,7 @@ article :not(pre) > code {
 }
 
 :where(ul, ol):not([class]) li::marker {
-  color: var(--primary);
+  color: var(--list-color);
   font-size: 0.825em;
   font-weight: 600;
 }
@@ -156,9 +151,9 @@ ol:not([class]) {
  */
 pre {
   border: none;
-  box-shadow: var(--elevation-accent);
-  background-color: var(--token-neutral-1);
-  color: var(--token-neutral-5);
+  box-shadow: var(--card-shadow);
+  background-color: var(--token-neutral-4);
+  color: var(--token-neutral-0);
   font-weight: 400;
 }
 
@@ -167,26 +162,26 @@ pre code {
 }
 
 :not(pre) > code {
-  color: var(--primary);
+  color: var(--inline-code-color);
 }
 
 /** SYNTAX */
 .token.punctuation,
 .token.comment,
 .token.operator {
-  color: var(--token-neutral-3);
+  color: var(--token-neutral-2);
   font-weight: 300;
 }
 
 /** SYNTAX */
 .token.keyword,
 .token.tag {
-  color: var(--token-neutral-3);
+  color: var(--token-neutral-2);
 }
 
 /** To overwrite the above colors */
 .token.attr-value {
-  color: var(--token-neutral-5);
+  color: var(--token-neutral-0);
 }
 
 .token.attr-name,
@@ -212,9 +207,13 @@ pre code {
 
 /** discard rounded corners on full width */
 @container post (inline-size < 47rem) {
+  article :where(img, pre, .info, .archive, .cp_embed_wrapper) {
+    border-radius: 0;
+  }
+
   article pre {
-    border-top: 2px solid var(--surface-2);
-    border-bottom: 2px solid var(--accent);
+    border-top: 2px solid var(--card-border);
+    border-bottom: 2px solid var(--card-border);
     box-shadow: none;
   }
 }

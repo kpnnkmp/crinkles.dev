@@ -1,5 +1,5 @@
 .icon {
-  color: var(--primary);
+  color: var(--link-color);
   width: 1.5em;
   /* padding: 4px; */
   object-fit: contain;

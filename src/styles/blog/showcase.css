@@ -1,5 +1,5 @@
 :root {
-  --elevation-showcase: 0.25em 0.25em 0px 0px var(--primary);
+  --elevation-showcase: var(--card-shadow);
 }
 
 .showcase,
@@ -19,7 +19,7 @@
 
 .showcase > *,
 .showcase--mobile > * {
-  background: var(--accent);
+  background: var(--surface-2);
   box-shadow: var(--elevation-showcase);
   width: 100%;
   height: 100%;

@@ -4,16 +4,14 @@ layout: base
 
 <section class="title-section page-section">
   <div class="flex --column maxw-2">
-    <p class="bold text-primary size-1">{{ description }}</p>
+    <p class="bold text-2 size-1">{{ description }}</p>
     <h1>{{ title }}</h1>
   </div>
   {% include picture %}
 </section>
 
-<section class="page-section">
-  {{ content | safe }}
-</section>
+<section class="page-section">{{ content | safe }}</section>
 
-{% set older = pagination.href.next | objectify("url") %}
-{% set newer = pagination.href.previous | objectify("url") %}
-{% include 'components/pagination.njk' %}
+{% set older = pagination.href.next | objectify("url") %} {% set newer =
+pagination.href.previous | objectify("url") %} {% include
+'components/pagination.njk' %}

@@ -4,20 +4,18 @@ layout: base
 
 <section class="title-section page-section">
   <div class="flex --column">
-    <p class="bold text-primary size-1">Hi, I'm Kevin!</p>
-    <h1>This is my digital corner of the internet</h1>
+    <h1>Hi, I'm Kevin Pennekamp!</h1>
     <p class="size-1 mt-1 maxw-2">
       I specialize in development around the web platform. In particular
-      <span class="tag bold">CSS</span>,
-      <span class="tag bold">architecture</span>, and
-      <span class="tag bold">security</span>. I know, a weird combination.
+      <span class="tag bold">CSS</span>, and
+      <span class="tag bold">security</span>. A weird combination, I know.
     </p>
   </div>
   {% include "svg/sticker-laptop.svg" %}
 </section>
 
-<section class="page-section | flex --column | mt-3">
-  <h2 class="size-3 text-primary mb-0">Recent posts</h2>
+<section class="page-section | flex --column">
+  <h2 class="size-2 mb-0">Recent posts</h2>
   <div class="card flex --column --gap-00 | mb-3">
     {% set posts = collections.posts | head(3) %} {% include
     "components/post-list.njk" %}

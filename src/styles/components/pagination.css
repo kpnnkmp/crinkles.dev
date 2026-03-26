@@ -32,7 +32,7 @@
 
 .pagination .newer[data-exists="true"]:hover,
 .pagination .older[data-exists="true"]:hover {
-  background-color: var(--primary);
+  background-color: var(--link-color);
   color: var(--surface-0);
 }
 

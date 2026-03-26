@@ -9,7 +9,7 @@
 
 .info-section > dt {
   font-weight: bold;
-  color: var(--primary);
+  color: var(--header-color);
 }
 
 .info-section > dd :is(a, span) {

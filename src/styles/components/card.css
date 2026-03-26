@@ -2,6 +2,7 @@
   background-color: var(--surface-1);
   padding: var(--token-size-3) var(--token-size-1);
   position: relative;
-  box-shadow: var(--elevation-accent);
+  box-shadow: var(--card-shadow);
+  border-radius: var(--radius);
   max-width: var(--card-width, var(--token-bp-3));
 }

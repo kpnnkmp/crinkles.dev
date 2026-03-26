@@ -1,14 +1,16 @@
 .title-section {
+  --size: 175px;
+
   display: grid;
   grid-template-columns:
-    min(var(--token-bp-3), calc(100% - 250px - var(--token-size-2)))
-    minmax(250px, 1fr);
+    min(var(--token-bp-3), calc(100% - var(--size) - var(--token-size-2)))
+    minmax(var(--size), 1fr);
   gap: var(--token-size-2);
   align-items: center;
 }
 
 .title-section > svg {
-  width: 250px;
+  width: var(--size);
   margin-inline: auto;
 }
 
@@ -20,8 +22,8 @@
   }
 
   .title-section > svg {
+    --size: 225px;
     margin-inline: auto;
     grid-row: 1;
-    width: 225px;
   }
 }

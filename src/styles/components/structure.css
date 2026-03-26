@@ -1,24 +1,21 @@
 /**
  * HEADER
  */
-header .logo {
+header .logo svg {
   transition: transform 500ms;
+  height: 1.5em;
 }
 
 header .logo path {
   transition: all 500ms;
 }
 
-header .logo:is(:hover, :focus) {
+header .logo:is(:hover, :focus) svg {
   animation: wiggle 0.5s;
 }
 
-header .logo:is(:hover, :focus) path {
-  fill: var(--primary);
-}
-
 header nav a {
-  background-image: linear-gradient(var(--primary), var(--primary));
+  background-image: linear-gradient(var(--link-color), var(--link-color));
   background-size: 0% 0.1em;
   background-position-y: 100%;
   background-position-x: 0%;
@@ -59,8 +56,8 @@ main:not(:has(.pagination)) {
   z-index: -1;
   background: linear-gradient(
     var(--surface-0),
-    var(--primary),
-    var(--primary),
+    var(--canvas),
+    var(--canvas),
     var(--surface-0)
   );
   opacity: 0.25;

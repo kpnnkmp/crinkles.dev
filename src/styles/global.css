@@ -18,15 +18,12 @@ body {
  * LINKS
  */
 a:not([class]) {
-  --anchor-color: var(--primary);
-
   color: inherit;
-  transition: color 200ms;
+  transition: all 200ms;
+  text-decoration-color: hsl(from var(--link-color) h s l / 50%);
 }
+
 a:not([class]):is(:hover, :focus) {
-  color: var(--primary);
-  text-decoration-color: var(--anchor-color);
-}
-a:not([class]):not(:is(:hover, :focus)) {
-  text-decoration-color: hsl(from var(--anchor-color) h s l / 50%);
+  color: var(--link-color);
+  text-decoration-color: var(--link-color);
 }

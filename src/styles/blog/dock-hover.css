@@ -13,8 +13,8 @@
   flex-grow: 1;
   height: 75px;
   border-radius: 4px;
-  background-color: var(--primary);
-  box-shadow: var(--elevation-primary);
+  background-color: var(--link-color);
+  box-shadow: var(--box-shadow);
   transition: transform 400ms;
 }
 
