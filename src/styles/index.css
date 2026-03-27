@@ -7,9 +7,14 @@
 @import "tokens.css" layer(global);
 @import "global.css" layer(global);
 
+/** layout */
+@import "layout/body.css" layer(layout);
+@import "layout/header.css" layer(layout);
+@import "layout/footer.css" layer(layout);
+@import "layout/main.css" layer(layout);
+
 /** components */
 @import "components/article.css" layer(components);
-@import "components/structure.css" layer(components);
 @import "components/pagination.css" layer(components);
 @import "components/tag.css" layer(components);
 @import "components/button.css" layer(components);

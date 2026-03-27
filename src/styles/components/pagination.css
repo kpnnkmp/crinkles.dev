@@ -4,7 +4,7 @@
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  border-top: 2px solid var(--text-0);
+  border-top: 1px solid var(--surface-2);
   margin-inline: auto;
   margin-top: var(--token-size-5);
 }
@@ -14,13 +14,6 @@
   display: flex;
   flex-direction: column;
   gap: none;
-}
-
-.pagination .newer {
-  border-right: 1px solid var(--text-0);
-}
-.pagination .older {
-  border-left: 1px solid var(--text-0);
 }
 
 .pagination .newer[data-exists="true"],
@@ -70,6 +63,6 @@
   }
 
   .pagination .newer[data-exists="true"] + .older[data-exists="true"] {
-    border-top: 2px solid var(--text-0);
+    border-top: 1px solid var(--surface-2);
   }
 }

@@ -57,11 +57,9 @@
 
   <body>
     {% include "partials/header.njk" %}
-    <main>
-      <div class="pattern"></div>
-      {{ content | safe }}
-    </main>
+    <main data-layout="{{ layout }}">{{ content | safe }}</main>
     {% include "partials/footer.njk" %}
+    <div class="pattern"></div>
   </body>
   <!--{% set js %}{% include "scripts/sticky-footer.js" %}{% endset %}
     <script>{{ js | safe }}</script>-->

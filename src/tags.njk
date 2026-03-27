@@ -1,7 +1,7 @@
 ---
 layout: page
 eleventyExcludeFromCollections: true
-picture: svg/sticker-book.svg
+sticker: svg/sticker-book.svg
 pagination:
   data: collections
   size: 1
@@ -15,14 +15,15 @@ eleventyComputed:
 ---
 
 {% set selected = tag %}
-<div class="sidebar --right --threshold-0 --gap-3">
+<section class="--main">
   {% set posts = collections[ tag ] | reverse or [] %} {% include
   "components/post-list.njk" %}
-  <aside>
-    <div class="card | flex --column --center --gap-1">
-      <h2>Categories</h2>
-      {% set tags = collections.posts | getAllTags %} {% include
-      "components/tag-list.njk" %}
-    </div>
-  </aside>
-</div>
+</section>
+
+<aside class="--side flex --column --center">
+  <div class="card | flex --column --center --gap-1">
+    <h2>Categories</h2>
+    {% set tags = collections.posts | getAllTags %} {% include
+    "components/tag-list.njk" %}
+  </div>
+</aside>

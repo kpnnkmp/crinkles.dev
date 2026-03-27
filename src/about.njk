@@ -1,11 +1,11 @@
 ---
 layout: page
 width: 5
-picture: svg/sticker-coffee.svg
 title: User manual
+sticker: svg/sticker-coffee.svg
 ---
 
-<section class="sidebar --right --threshold-0 --gap-3">
+<section class="--main">
   <dl class="info-section">
     <dt>Who.</dt>
     <dd>
@@ -83,11 +83,13 @@ title: User manual
       </ul>
     </dd>
   </dl>
-  <aside class="flex --column --gap-1">
-    <div class="card | flex --column --center">
-      <h2 class="mb-2 text-center">You can find me here</h2>
-      {% include "partials/socials.njk" %}
-      <a href="/uses" class="mt-2 | btn">Or take a look at my /uses page.</a>
-    </div>
-  </aside>
 </section>
+
+<aside class="--side flex --column --center">
+  <div class="card | flex --column --center">
+    <h2 class="mb-2 text-center">You can find me here</h2>
+    {% include "partials/socials.njk" %}
+  </div>
+
+  <a href="/uses" class="mt-2 | btn">Or take a look at my /uses page.</a>
+</aside>

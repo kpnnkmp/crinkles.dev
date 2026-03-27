@@ -67,21 +67,23 @@
   --surface-1: var(--token-neutral-1);
   --surface-2: var(--token-neutral-2);
 
-  --canvas: var(--token-orange-1);
-  --logo-color: var(--token-orange-1);
-  --link-color: var(--token-orange-2);
-  --list-color: var(--token-orange-2);
-  --quote-color: var(--token-orange-2);
-  --header-color: var(--token-orange-1);
-  --inline-code-color: var(--token-orange-2);
-  --button-text: var(--token-orange-2);
+  --canvas: var(--token-green-1);
+  --logo-color-start: var(--token-green-0);
+  --logo-color-end: var(--token-green-1);
+  --link-color: var(--token-green-1);
+  --list-color: var(--token-green-1);
+  --quote-color: var(--token-green-1);
+  --header-color: var(--token-green-1);
+  --inline-code-color: var(--token-green-1);
+  --button-text: var(--token-green-1);
   --button-background: transparent;
-  --button-border: var(--token-orange-2);
-  --box-shadow-color: var(--token-orange-0);
+  --button-border: var(--token-green-1);
+  --box-shadow-color: var(--token-green-0);
   --card-border: var(--token-orange-0);
   --card-shadow: 0.25em 0.25em 0px 0px var(--card-border);
   --info-background: var(--token-orange-0);
   --info-text: var(--token-neutral-5);
+  --footer-background: var(--token-neutral-1);
 }
 
 /**
@@ -98,8 +100,9 @@
     --surface-2: var(--token-neutral-3);
 
     --canvas: var(--token-orange-0);
-    --logo-color: var(--token-orange-1);
-    --link-color: var(--token-orange-1);
+    --logo-color-start: var(--token-green-0);
+    --logo-color-end: var(--token-orange-0);
+    --link-color: var(--token-green-0);
     --list-color: var(--token-orange-0);
     --quote-color: var(--token-orange-0);
     --header-color: var(--token-orange-0);
@@ -112,5 +115,6 @@
     --card-shadow: 0.25em 0.25em 0px 0px var(--card-border);
     --info-background: var(--token-orange-0);
     --info-text: var(--token-neutral-5);
+    --footer-background: var(--token-neutral-4);
   }
 }

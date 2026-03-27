@@ -1,0 +1,30 @@
+body {
+  position: relative;
+  z-index: 1;
+  background: var(--surface-0);
+}
+
+/* background pattern on the main */
+.pattern {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: calc(100vh - 20rem);
+  z-index: -1;
+  background: linear-gradient(
+    var(--surface-0),
+    var(--canvas),
+    var(--canvas),
+    var(--surface-0)
+  );
+  opacity: 0.25;
+  mask-image: url("../site/pattern.svg");
+  mask-size: 16px;
+  mask-repeat: repeat;
+}
+
+@media (prefers-color-scheme: dark) {
+  .pattern {
+    opacity: 0.35;
+  }
+}

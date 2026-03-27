@@ -2,12 +2,6 @@
 layout: base
 ---
 
-<section class="title-section page-section">
-  <div class="flex --column maxw-3">
-    <p class="bold text-2 size-1">{{ description }}</p>
-    <h1>{{ title }}</h1>
-  </div>
-  {% include picture %}
-</section>
-
-<section class="page-section">{{ content | safe }}</section>
+<h1 class="--title text-center">{{ title }}</h1>
+<div class="--sticker">{% include sticker %}</div>
+{{ content | safe }}

@@ -2,16 +2,12 @@
 layout: base
 ---
 
-<section class="title-section page-section">
-  <div class="flex --column maxw-2">
-    <p class="bold text-2 size-1">{{ description }}</p>
-    <h1>{{ title }}</h1>
-  </div>
-  {% include picture %}
-</section>
+<h1 class="--title">{{ title }}</h1>
+<div class="--sticker">{% include sticker %}</div>
 
-<section class="page-section">{{ content | safe }}</section>
 
-{% set older = pagination.href.next | objectify("url") %} {% set newer =
-pagination.href.previous | objectify("url") %} {% include
-'components/pagination.njk' %}
+{{ content | safe }}
+
+{% set older = pagination.href.next | objectify("url") %}
+{% set newer = pagination.href.previous | objectify("url") %}
+{% include 'components/pagination.njk' %}

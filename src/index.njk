@@ -2,23 +2,28 @@
 layout: base
 ---
 
-<section class="title-section page-section">
-  <div class="flex --column">
-    <h1>Hi, I'm Kevin Pennekamp!</h1>
-    <p class="size-1 mt-1 maxw-2">
-      I specialize in development around the web platform. In particular
+<h1 class="--title text-center">Hi, I'm Kevin Pennekamp!</h1>
+
+<section class="--side flex --column | mb-1">
+  <div class="card text-center size-1">
+    <p>
+      A front-end engineer specialized in
       <span class="tag bold">CSS</span>, and
-      <span class="tag bold">security</span>. A weird combination, I know.
+      <span class="tag bold">security</span>. A weird combination,
+      <i>I know</i>. <span class="tag bold">interrupted.dev</span> is my digital
+      corner of the internet.
     </p>
   </div>
-  {% include "svg/sticker-laptop.svg" %}
 </section>
 
-<section class="page-section | flex --column">
-  <h2 class="size-2 mb-0">Recent posts</h2>
-  <div class="card flex --column --gap-00 | mb-3">
+
+<section class="--main">
+  <h2 class="mb-0">Recent posts</h2>
+  <div class="flex --column --gap-00 | mb-3">
     {% set posts = collections.posts | head(3) %} {% include
     "components/post-list.njk" %}
   </div>
   <a href="/writing" class="size-00 | btn | self-start">Read more articles</a>
 </section>
+
+<div class="--sticker">{% include "svg/sticker-laptop.svg" %}</div>
