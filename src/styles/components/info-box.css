@@ -24,7 +24,7 @@
 .archive::before {
   position: absolute;
   display: block;
-  top: -0.7em;
+  top: -0.675em;
   font-size: var(--token-size-00);
   color: var(--info-text);
   padding: 0px 6px;

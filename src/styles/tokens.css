@@ -14,8 +14,9 @@
    */
   --token-orange-0: #f2c89d;
   --token-orange-1: #f6734a;
-  --token-orange-2: #da4415;
+  --token-orange-2: #f9551f;
   --token-green-0: #25ac89;
+  --token-green-1: #1c756a;
   --token-yellow-0: #ffd27f;
 
   --code-primary: var(--token-orange-1);
