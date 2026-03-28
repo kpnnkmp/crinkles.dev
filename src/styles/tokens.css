@@ -15,8 +15,9 @@
   --token-orange-0: #f2c89d;
   --token-orange-1: #f6734a;
   --token-orange-2: #f9551f;
-  --token-green-0: #25ac89;
-  --token-green-1: #1c756a;
+  --token-green-0: #55e3be;
+  --token-green-1: #25ac89;
+  --token-green-2: #1c756a;
   --token-yellow-0: #ffd27f;
 
   --code-primary: var(--token-orange-1);
@@ -67,19 +68,19 @@
   --surface-1: var(--token-neutral-1);
   --surface-2: var(--token-neutral-2);
 
-  --canvas: var(--token-green-1);
-  --logo-color-start: var(--token-green-0);
-  --logo-color-end: var(--token-orange-0);
-  --link-color: var(--token-green-1);
-  --list-color: var(--token-green-1);
-  --quote-color: var(--token-green-1);
-  --header-color: var(--token-green-1);
-  --inline-code-color: var(--token-green-1);
-  --button-text: var(--token-green-1);
+  --canvas: var(--token-green-2);
+  --logo-color-start: var(--token-green-1);
+  --logo-color-end: var(--token-green-2);
+  --link-color: var(--token-green-2);
+  --list-color: var(--token-green-2);
+  --quote-color: var(--token-green-2);
+  --header-color: var(--token-green-2);
+  --inline-code-color: var(--token-green-2);
+  --button-text: var(--token-green-2);
   --button-background: transparent;
-  --button-border: var(--token-green-1);
+  --button-border: var(--token-green-2);
   --box-shadow-color: var(--token-green-0);
-  --card-border: var(--token-orange-0);
+  --card-border: var(--token-green-2);
   --card-shadow: 0.25em 0.25em 0px 0px var(--card-border);
   --info-background: var(--token-orange-0);
   --info-text: var(--token-neutral-5);
@@ -100,8 +101,8 @@
 
     --canvas: var(--token-orange-0);
     --logo-color-start: var(--token-green-0);
-    --logo-color-end: var(--token-orange-0);
-    --link-color: var(--token-green-0);
+    --logo-color-end: var(--token-green-1);
+    --link-color: var(--token-green-1);
     --list-color: var(--token-orange-0);
     --quote-color: var(--token-orange-0);
     --header-color: var(--token-orange-0);
