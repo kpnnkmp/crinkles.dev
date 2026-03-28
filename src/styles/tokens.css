@@ -69,7 +69,7 @@
 
   --canvas: var(--token-green-1);
   --logo-color-start: var(--token-green-0);
-  --logo-color-end: var(--token-green-1);
+  --logo-color-end: var(--token-orange-0);
   --link-color: var(--token-green-1);
   --list-color: var(--token-green-1);
   --quote-color: var(--token-green-1);
