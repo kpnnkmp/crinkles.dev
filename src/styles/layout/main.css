@@ -99,4 +99,8 @@ main[data-layout="paginated"] {
       "side"
       "footer";
   }
+
+  .--title {
+    text-align: center;
+  }
 }

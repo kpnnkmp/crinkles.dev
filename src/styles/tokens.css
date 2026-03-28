@@ -83,7 +83,6 @@
   --card-shadow: 0.25em 0.25em 0px 0px var(--card-border);
   --info-background: var(--token-orange-0);
   --info-text: var(--token-neutral-5);
-  --footer-background: var(--token-neutral-1);
 }
 
 /**
@@ -115,6 +114,5 @@
     --card-shadow: 0.25em 0.25em 0px 0px var(--card-border);
     --info-background: var(--token-orange-0);
     --info-text: var(--token-neutral-5);
-    --footer-background: var(--token-neutral-4);
   }
 }

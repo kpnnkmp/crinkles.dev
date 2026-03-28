@@ -3,13 +3,14 @@ footer {
   font-size: var(--token-size-00);
   inset: 0;
   top: unset;
-  border-top: 1px solid var(--text-2);
-  background-color: var(--footer-background);
+  border-top: 1px solid var(--surface-2);
   color: var(--footer-color);
-}
-
-footer[data-sticky] {
-  position: sticky;
+  width: 100%;
+  max-width: min(
+    calc(100% - 2 * var(--token-size-2)),
+    calc(var(--token-bp-5) - 2 * var(--token-size-2))
+  );
+  margin-inline: auto;
 }
 
 footer .signature {
